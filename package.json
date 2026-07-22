@@ -1,0 +1,36 @@
+{
+  "name": "dips-smart-learning",
+  "version": "1.0.0",
+  "description": "Dips Smart Learning - Premium Educational Platform",
+  "private": true,
+  "author": "Dipal Patel",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "start": "firebase emulators:start",
+    "serve": "firebase serve",
+    "build": "echo \"No build step required\"",
+    "deploy": "firebase deploy",
+    "deploy:hosting": "firebase deploy --only hosting",
+    "deploy:functions": "firebase deploy --only functions"
+  },
+  "keywords": [
+    "education",
+    "worksheets",
+    "balvatika",
+    "std1",
+    "std2",
+    "firebase",
+    "razorpay",
+    "digital-products"
+  ],
+  "dependencies": {
+    "firebase": "^11.0.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
