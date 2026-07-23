@@ -191,4 +191,11 @@ h1,h2,h3{font-family:var(--font-display);margin:0;line-height:1.1;}
   .hero-copy h1{font-size:40px;}
   .how-grid{grid-template-columns:1fr;}
   .hero-art{height:220px;}
+}/* Hide modal until opened */
+.modal[hidden] {
+  display: none !important;
+}
+
+.modal:not([hidden]) {
+  display: flex;
 }
