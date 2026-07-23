@@ -85,9 +85,13 @@ function openModal(p) {
   `;
   modal.hidden = false;
  
-}document.getElementById("checkoutBtn").addEventListener("click", () => {
+modal.hidden = false;
+
+document.getElementById("checkoutBtn").addEventListener("click", () => {
   console.log("Checkout button clicked");
 });
+
+}
 
 modalClose.addEventListener("click", () => (modal.hidden = true));
 modal.addEventListener("click", (e) => { if (e.target === modal) modal.hidden = true; });
