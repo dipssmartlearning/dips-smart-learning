@@ -1,39 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dips Smart Learning</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dips Smart Learning — Easy Learning by Dipal Patel</title>
+<meta name="description" content="Premium printable worksheets, books and digital learning resources for teachers, parents and students." />
 
-  <link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-<header>
-  <h1>Dips Smart Learning</h1>
-  <p>Easy Learning by Dipal Patel</p>
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#" class="brand">
+      <img src="logo.png" alt="Dips Smart Learning" class="brand-logo" />
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#catalog">Worksheets</a>
+      <a href="#catalog">Books</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="cart-btn" id="cartBtn" aria-label="My purchases">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 3h2l2.4 12.4a2 2 0 0 0 2 1.6h8.2a2 2 0 0 0 2-1.6L21 8H6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="20" r="1.4" fill="currentColor"/><circle cx="18" cy="20" r="1.4" fill="currentColor"/></svg>
+      <span>My PDFs</span>
+    </button>
+  </div>
 </header>
 
-<nav>
-  <a href="#">Home</a>
-  <a href="#">Worksheets</a>
-  <a href="#">Books</a>
-  <a href="#">About</a>
-  <a href="#">Contact</a>
-</nav>
-
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <h2>Premium Educational Resources</h2>
-  <p>
-    Printable Worksheets, Books, Activities and Digital Learning
-    for Teachers, Parents and Students.
-  </p>
-
-  <a href="#" class="btn">Explore Products</a>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">✦ Digital PDF Store</span>
+      <h1>Open a book.<br>Turn on an idea.</h1>
+      <p class="hero-sub">Printable worksheets, workbooks and activity sets — made for little learners, ready in seconds after you pay. No app to install, no waiting.</p>
+      <div class="hero-actions">
+        <a href="#catalog" class="btn btn-primary">Explore Products</a>
+        <a href="#how" class="btn btn-ghost">How it works</a>
+      </div>
+      <div class="hero-trust">
+        <span>🔒 Secure UPI payment</span>
+        <span>⚡ Instant download</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="bulb-glow"></div>
+      <svg class="hero-book" width="360" height="240" viewBox="0 0 360 240" fill="none">
+        <path d="M20 60 C 100 40, 160 45, 180 70 L 180 210 C 160 185, 100 180, 20 200 Z" fill="#1B3F94"/>
+        <path d="M340 60 C 260 40, 200 45, 180 70 L 180 210 C 200 185, 260 180, 340 200 Z" fill="#1B3F94"/>
+        <path d="M28 66 C 100 48, 155 52, 178 74 L 178 198 C 155 178, 100 174, 28 190 Z" fill="#FFFBF3"/>
+        <path d="M332 66 C 260 48, 205 52, 182 74 L 182 198 C 205 178, 260 174, 332 190 Z" fill="#FFFBF3"/>
+      </svg>
+      <span class="floret f1">A</span><span class="floret f2">1</span><span class="floret f3">✦</span><span class="floret f4">B</span><span class="floret f5">2</span>
+    </div>
+  </div>
+  <svg class="wave-divider" viewBox="0 0 1440 80" preserveAspectRatio="none"><path d="M0,40 C 240,10 480,70 720,40 C 960,10 1200,70 1440,40 L1440,80 L0,80 Z" fill="#FFFBF3"/></svg>
 </section>
 
-<script src="js/script.js"></script>
+<!-- ============ HOW IT WORKS ============ -->
+<section class="how" id="how">
+  <div class="wrap how-grid">
+    <div class="how-step"><span class="how-num">Pick</span><p>Choose a worksheet, workbook or activity set from the catalog.</p></div>
+    <div class="how-step"><span class="how-num">Pay</span><p>Checkout securely with GPay, PhonePe or any UPI app.</p></div>
+    <div class="how-step"><span class="how-num">Print</span><p>Your PDF unlocks instantly — download and print at home.</p></div>
+  </div>
+</section>
 
+<!-- ============ CATALOG ============ -->
+<section class="catalog" id="catalog">
+  <div class="wrap">
+    <div class="catalog-head">
+      <h2>Browse the library</h2>
+      <div class="filters" id="filters">
+        <button class="filter-pill active" data-cat="all">All</button>
+        <button class="filter-pill" data-cat="Worksheets">Worksheets</button>
+        <button class="filter-pill" data-cat="Books">Books</button>
+        <button class="filter-pill" data-cat="Activities">Activities</button>
+      </div>
+    </div>
+
+    <div class="product-grid" id="productGrid">
+      <!-- Product cards injected by app.js -->
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+      <div class="skeleton-card"></div>
+    </div>
+
+    <p class="empty-state" id="emptyState" hidden>No products here yet — new resources are added every week. Check back soon!</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="wrap about-inner">
+    <h2>Easy Learning by Dipal Patel</h2>
+    <p>Every worksheet and workbook here is built and tested in a real classroom, then refined for parents and teachers everywhere. Simple pages, clear instructions, and a design kids actually enjoy filling in.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="wrap footer-inner">
+    <div>
+      <img src="logo.png" alt="Dips Smart Learning" class="footer-logo" />
+      <p>Easy Learning by Dipal Patel</p>
+    </div>
+    <div class="footer-links">
+      <a href="mailto:hello@dipssmartlearning.com">hello@dipssmartlearning.com</a>
+      <a href="#catalog">Shop</a>
+      <a href="#about">About</a>
+    </div>
+  </div>
+  <p class="footer-note">© <span id="year"></span> Dips Smart Learning. All PDFs are for personal, non-commercial printing only.</p>
+</footer>
+
+<!-- ============ PRODUCT MODAL ============ -->
+<div class="modal" id="productModal" hidden>
+  <div class="modal-card">
+    <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<script type="module" src="firebase-config.js"></script>
+<script type="module" src="app.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
