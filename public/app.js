@@ -84,11 +84,10 @@ function openModal(p) {
     </div>
   `;
   modal.hidden = false;
-  document.getElementById("checkoutBtn").addEventListener("click", () => {
-    // Checkpoint 2 will wire this up to Razorpay checkout
-    alert("Checkout is coming in the next step — Razorpay payment isn't wired up yet.");
-  });
-}
+ 
+}document.getElementById("checkoutBtn").addEventListener("click", () => {
+  console.log("Checkout button clicked");
+});
 
 modalClose.addEventListener("click", () => (modal.hidden = true));
 modal.addEventListener("click", (e) => { if (e.target === modal) modal.hidden = true; });
