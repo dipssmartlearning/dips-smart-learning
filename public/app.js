@@ -1,7 +1,7 @@
 import { db } from "./firebase-config.js";
 import { collection, getDocs }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
-
+import { startCheckout } from "./js/payment.js";
 const CATEGORY_COLORS = {
   Worksheets: "#5CB84E",
   Books: "#E8386B",
@@ -85,11 +85,11 @@ function openModal(p) {
   `;
   modal.hidden = false;
  
-modal.hidden = false;
-
-document.getElementById("checkoutBtn").addEventListener("click", () => {
-  console.log("Checkout button clicked");
+  
+  document.getElementById("checkoutBtn").addEventListener("click", () => {
+  startCheckout(p);
 });
+
 
 }
 
