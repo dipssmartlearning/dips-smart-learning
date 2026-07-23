@@ -1,5 +1,5 @@
 import { db } from "./firebase-config.js";
-import { collection, query, where, getDocs, orderBy }
+import { collection, getDocs }
   from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const CATEGORY_COLORS = {
@@ -21,13 +21,11 @@ let activeCategory = "all";
 // ---------- Load products from Firestore ----------
 async function loadProducts() {
   try {
-    const q = query(
-      collection(db, "products"),
-      where("active", "==", true),
-      orderBy("createdAt", "desc")
-    );
-    const snap = await getDocs(q);
-    allProducts = snap.docs.map(d => ({ id: d.id, ...d.data() }));
+    const snap = await getDocs(collection(db, "products"));
+    allProducts = snap.docs
+      .map(d => ({ id: d.id, ...d.data() }))
+      .filter(p => p.active === true)
+      .sort((a, b) => (b.createdAt?.seconds || 0) - (a.createdAt?.seconds || 0));
     render();
   } catch (err) {
     console.error("Failed to load products:", err);
